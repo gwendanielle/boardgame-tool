@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/svg+xml" href="/boardgame-tool/favicon.svg" />
+    <link rel="apple-touch-icon" href="/boardgame-tool/apple-touch-icon-180x180.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="description" content="Handy tools for game night: scoreboard, answer sheet and role playing helpers." />
@@ -11,9 +11,18 @@
     <meta name="apple-mobile-web-app-title" content="Boardgame" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>Boardgame Tool</title>
-    <script type="module" crossorigin src="/assets/index-BUSGDNBU.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DLRn5qvz.css">
-  <link rel="manifest" href="/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
+    <script>
+      // Restores the deep link stashed by 404.html before the router boots.
+      (function () {
+        var match = /[?&]redirect=([^&]*)/.exec(location.search);
+        if (match) {
+          history.replaceState(null, '', location.pathname.replace(/\/$/, '/') + decodeURIComponent(match[1]));
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/boardgame-tool/assets/index-KEMMtCwt.js"></script>
+    <link rel="stylesheet" crossorigin href="/boardgame-tool/assets/index-Dh0pvzD_.css">
+  <link rel="manifest" href="/boardgame-tool/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/boardgame-tool/registerSW.js"></script></head>
   <body>
     <div id="root"></div>
   </body>
