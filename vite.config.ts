@@ -6,6 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
+  // GitHub Pages serves the app from https://<user>.github.io/boardgame-tool/
+  base: '/boardgame-tool/',
   plugins: [
     react(),
     tailwindcss(),
@@ -23,8 +25,8 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
-        scope: '/',
+        start_url: '/boardgame-tool/',
+        scope: '/boardgame-tool/',
         icons: [
           {src: 'pwa-64x64.png', sizes: '64x64', type: 'image/png'},
           {src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png'},
@@ -35,7 +37,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,ico,woff,woff2}'],
         // SPA: every navigation falls back to the cached shell when offline
-        navigateFallback: '/index.html',
+        navigateFallback: '/boardgame-tool/index.html',
       },
     }),
   ],

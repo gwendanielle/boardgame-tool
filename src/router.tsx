@@ -29,5 +29,9 @@ export const router = createBrowserRouter(
                 Component: RolePlaying
             }
         ],
-    }]
+    }],
+    {
+        // keeps routes working when the app is served from a sub-path (GitHub Pages)
+        basename: import.meta.env.BASE_URL,
+    }
 )

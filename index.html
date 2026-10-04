@@ -11,6 +11,15 @@
     <meta name="apple-mobile-web-app-title" content="Boardgame" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>Boardgame Tool</title>
+    <script>
+      // Restores the deep link stashed by 404.html before the router boots.
+      (function () {
+        var match = /[?&]redirect=([^&]*)/.exec(location.search);
+        if (match) {
+          history.replaceState(null, '', location.pathname.replace(/\/$/, '/') + decodeURIComponent(match[1]));
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
