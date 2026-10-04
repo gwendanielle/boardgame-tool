@@ -1,0 +1,52 @@
+.container {
+  padding: 24px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0 auto;
+
+  /* Mobile Breakpoint (e.g., screens smaller than 768px) */
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px 16px;
+  border-radius: 32px;
+  // soft, colourful backdrop to set a lighthearted tone
+  background:
+    radial-gradient(circle at 15% 20%, color-mix(in oklab, var(--primary) 35%, transparent), transparent 55%),
+    radial-gradient(circle at 85% 30%, color-mix(in oklab, oklch(0.78 0.16 250) 30%, transparent), transparent 55%),
+    radial-gradient(circle at 50% 100%, color-mix(in oklab, oklch(0.78 0.16 330) 28%, transparent), transparent 60%);
+}
+
+.dice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: var(--background);
+  box-shadow: 0 6px 0 0 color-mix(in oklab, var(--border) 80%, transparent);
+}
+
+.title {
+  // playful gradient wordmark
+  background: linear-gradient(
+    90deg,
+    oklch(0.72 0.18 45),
+    oklch(0.7 0.17 320),
+    oklch(0.7 0.16 250)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
